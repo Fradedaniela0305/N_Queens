@@ -54,6 +54,9 @@ def display_board(screen, n) -> list:
     return points
 
 def display_queens(screen, squares_coordinates, results, n):
+    if not results:
+        pass # TODO
+
     queen_image = get_queen_image(n)
     square_length = (SCREEN_WIDTH_HEIGHT - 100) / n
 
