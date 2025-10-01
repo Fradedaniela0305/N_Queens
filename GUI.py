@@ -6,7 +6,6 @@ from n_queens import n_queens
 
 SCREEN_WIDTH_HEIGHT = 800
 
-CLOCK = pygame.time.Clock()
 
 def initialize_screen() -> pygame.Surface:
     screen = pygame.display.set_mode((SCREEN_WIDTH_HEIGHT, SCREEN_WIDTH_HEIGHT))
@@ -54,8 +53,8 @@ def display_board(screen, n) -> list:
     return points
 
 def display_queens(screen, squares_coordinates, results, n):
-    if not results:
-        pass # TODO
+    if not results: # TODO
+        return False
 
     queen_image = get_queen_image(n)
     square_length = (SCREEN_WIDTH_HEIGHT - 100) / n
