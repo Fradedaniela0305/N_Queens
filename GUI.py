@@ -2,9 +2,9 @@
 import sys
 import pygame
 from n_queens import n_queens
+from utils import *
 
 
-SCREEN_WIDTH_HEIGHT = 800
 
 
 def initialize_screen() -> pygame.Surface:
