@@ -53,27 +53,14 @@ def main_menu():
                     if message == NUMBER_MESSAGE:
                         main_gui(int(user_text))
                     elif message == NOT_A_NUMBER_MESSAGE:
-
-                        fail_text = BASE_TEXT_FONT.render("ENTER VALID NUMBER", True, (255, 0, 0))
-                        fail_text_rect = fail_text.get_rect(center = error_box.center)
-                        screen.blit(fail_text, fail_text_rect)
-                        pygame.display.update()
-                        pygame.time.wait(1000)
-
+                        display_error_message(screen, 'ENTER A VALID NUMBER', error_box, text_box)
                         user_text = ''
-                        screen.fill((2, 12, 102), error_box)
-                        screen.fill((2, 12, 102), text_box)
+
+
 
                     elif message == TOO_BIG_NUMBER:
-                        fail_text = BASE_TEXT_FONT.render("DON'T DO THAT", True, (255, 0, 0))
-                        fail_text_rect = fail_text.get_rect(center = error_box.center)
-                        screen.blit(fail_text, fail_text_rect)
-                        pygame.display.update()
-                        pygame.time.wait(1000)
-
+                        display_error_message(screen, "YOU'LL CRASH", error_box, text_box)
                         user_text = ''
-                        screen.fill((2, 12, 102), text_box)
-                        screen.fill((2, 12, 102), error_box)
 
 
 
@@ -95,6 +82,14 @@ def main_menu():
         # pygame.display.update()
 
 
+def display_error_message(screen, message, error_box, text_box):
+    fail_text = BASE_TEXT_FONT.render("ENTER VALID NUMBER", True, (255, 0, 0))
+    fail_text_rect = fail_text.get_rect(center=error_box.center)
+    screen.blit(fail_text, fail_text_rect)
+    pygame.display.update()
+    pygame.time.wait(1000)
+    screen.fill((2, 12, 102), error_box)
+    screen.fill((2, 12, 102), text_box)
 
 
 def initialize_screen(title):
