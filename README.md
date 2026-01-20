@@ -57,3 +57,8 @@ This project solves the problem using **recursive backtracking**, checking colum
 - Python 3.x
 - Pygame
 
+## Screenshot
+
+### Solved N-Queens Board
+![Solved N-Queens Board](screenshots/board.png)
+
